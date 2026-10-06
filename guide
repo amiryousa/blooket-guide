@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blooket Hub | Codes, Guides & Tips</title>
+  <meta name="description" content="A gaming-style Blooket guide with game codes, tips, security information, and gameplay guides.">
+
+  <style>
+    /* =========================
+       RESET & VARIABLES
+    ========================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #070812;
+      --bg-light: #0d1020;
+      --card: #111526;
+      --card-hover: #171c31;
+      --text: #f4f7ff;
+      --muted: #9299b5;
+      --purple: #8b5cf6;
+      --cyan: #22d3ee;
+      --pink: #ec4899;
+      --green: #22c55e;
+      --yellow: #facc15;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 15px 50px rgba(0,0,0,0.35);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(139,92,246,.18), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(34,211,238,.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(7,8,18,.75);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .95rem;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 110px 0 70px;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      animation: fadeUp .8s ease;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(34,211,238,.3);
+      background: rgba(34,211,238,.08);
+      color: var(--cyan);
+      font-size: .8rem;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: .95;
+      letter-spacing: -5px;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--purple),
+        var(--pink)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: .25s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      box-shadow: 0 10px 30px rgba(139,92,246,.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Floating glow */
+    .glow {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: var(--purple);
+      filter: blur(140px);
+      opacity: .12;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .glow.one {
+      top: 15%;
+      left: -150px;
+    }
+
+    .glow.two {
+      bottom: 5%;
+      right: -150px;
+      background: var(--cyan);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       CARDS
+    ========================== */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.015)
+      );
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+      transition: .3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(139,92,246,.5);
+      background: var(--card-hover);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(139,92,246,.15);
+      color: var(--purple);
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    /* =========================
+       CODE SECTION
+    ========================== */
+
+    .codes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .code-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .code-number {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--cyan);
+      letter-spacing: 2px;
+      margin: 12px 0;
+    }
+
+    .code-status {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(34,197,94,.1);
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: bold;
+    }
+
+    .copy-btn {
+      width: 100%;
+      border: 0;
+      padding: 10px;
+      border-radius: 9px;
+      margin-top: 15px;
+      cursor: pointer;
+      background: rgba(34,211,238,.1);
+      color: var(--cyan);
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(34,211,238,.2);
+    }
+
+    .notice {
+      margin-top: 25px;
+      padding: 15px 18px;
+      border-left: 3px solid var(--yellow);
+      background: rgba(250,204,21,.06);
+      color: #d8d9e4;
+      border-radius: 8px;
+      font-size: .9rem;
+    }
+
+    /* =========================
+       STEPS
+    ========================== */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      font-weight: 900;
+    }
+
+    /* =========================
+       SECURITY
+    ========================== */
+
+    .security-box {
+      padding: 35px;
+      border-radius: 20px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,211,238,.08),
+          rgba(139,92,246,.08)
+        );
+      border: 1px solid var(--border);
+    }
+
+    .security-list {
+      margin-top: 20px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .security-item {
+      display: flex;
+      gap: 12px;
+      color: var(--muted);
+    }
+
+    .check {
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    /* =========================
+       TIPS
+    ========================== */
+
+    .tip-card {
+      min-height: 190px;
+    }
+
+    .tip-card strong {
+      color: var(--cyan);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 45px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+    }
+
+    footer .logo {
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================== */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: .7s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 800px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        background: rgba(7,8,18,.97);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .grid,
+      .codes,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">BLOOKET<span>HUB</span></a>
+
+        <button class="menu-btn" id="menuBtn">
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#codes">Codes</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#tips">Tips</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main id="home">
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="badge">
+            🎮 BLOOKET GAMING GUIDE
+          </div>
+
+          <h1>
+            Level Up Your
+            <span class="gradient-text">Blooket Game</span>
+          </h1>
+
+          <p>
+            Discover game codes, learn how Blooket works,
+            improve your strategy, and stay safe while gaming.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#codes" class="btn btn-primary">
+              View Codes
+            </a>
+
+            <a href="#tips" class="btn btn-secondary">
+              Explore Tips
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         CODES
+    ========================== -->
+
+    <section id="codes">
+      <div class="container">
+
+        <div class="section-title reveal">
+          <h2>🎟️ Game Codes</h2>
+          <p>Example codes for demonstrating the website design.</p>
+        </div>
+
+        <div class="codes">
+
+          <div class="card code-card reveal">
+            <span class="code-status">DEMO</span>
+            <h3>Sample Game</h3>
+
+            <div class="code-number">
+              123456
+            </div>
+
+            <p>
+              Example game code. Replace this with a
+              current legitimate code from your host.
+            </p>
+
+            <button class="copy-btn" onclick="copyCode('123456', this)">
+              Copy Code
+            </button>
+          </div>
+
+          <div class="card code-card reveal">
+            <span class="code-status">DEMO</span>
+            <h3>Practice Game</h3>
+
+            <div class="code-number">
+              789012
+            </div>
+
+            <p>
+              Another example code for your page layout.
+            </p>
+
+            <button class="copy-btn" onclick="copyCode('789012', this)">
+              Copy Code
+            </button>
+          </div>
+
+          <div class="card code-card reveal">
+            <span class="code-status">DEMO</span>
+            <h3>Class Game</h3>
+
+            <div class="code-number">
+              345678
+            </div>
+
+            <p>
+              Add your own verified game information here.
+            </p>
+
+            <button class="copy-btn" onclick="copyCode('345678', this)">
+              Copy Code
+            </button>
+          </div>
+
+        </div>
+
+        <div class="notice">
+          ⚠️ <strong>Important:</strong>
+          Game codes are temporary and are created by game hosts.
+          This site does not generate or hack game codes.
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         HOW BLOOKET WORKS
+    ========================== -->
+
+    <section id="how">
+      <div class="container">
+
+        <div class="section-title reveal">
+          <h2>⚡ How Blooket Works</h2>
+          <p>A simple overview for new players.</p>
+        </div>
+
+        <div class="steps">
+
+          <div class="card step reveal">
+            <div class="step-number">1</div>
+
+            <h3>Join</h3>
+
+            <p>
+              A host starts a game and provides a
+              join code to the players.
+            </p>
+          </div>
+
+          <div class="card step reveal">
+            <div class="step-number">2</div>
+
+            <h3>Answer</h3>
+
+            <p>
+              Players answer questions and compete
+              according to the selected game mode.
+            </p>
+          </div>
+
+          <div class="card step reveal">
+            <div class="step-number">3</div>
+
+            <h3>Compete</h3>
+
+            <p>
+              Use knowledge and strategy to earn
+              rewards and climb the leaderboard.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-title reveal">
+          <h2>🚀 What's Inside?</h2>
+          <p>Everything you need for a better gaming experience.</p>
+        </div>
+
+        <div class="grid">
+
+          <div class="card reveal">
+            <div class="icon">🎟️</div>
+            <h3>Game Codes</h3>
+            <p>
+              Keep a list of legitimate game codes
+              provided by hosts.
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon">🧠</div>
+            <h3>Game Knowledge</h3>
+            <p>
+              Learn the basics of game modes,
+              questions, and rewards.
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon">🛡️</div>
+            <h3>Safety First</h3>
+            <p>
+              Learn how to protect your account and
+              avoid suspicious cheat websites.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         SECURITY
+    ========================== -->
+
+    <section id="security">
+      <div class="container">
+
+        <div class="security-box reveal">
+
+          <div class="section-title" style="text-align:left; margin-bottom:20px;">
+            <h2>🛡️ Security</h2>
+
+            <p>
+              Protect your account and your device while playing.
+            </p>
+          </div>
+
+          <div class="security-list">
+
+            <div class="security-item">
+              <span class="check">✓</span>
+              <span>
+                Never give your password to websites claiming
+                to provide unlimited coins or hacks.
+              </span>
+            </div>
+
+            <div class="security-item">
+              <span class="check">✓</span>
+              <span>
+                Avoid downloading unknown browser extensions
+                or executable files advertised as cheats.
+              </span>
+            </div>
+
+            <div class="security-item">
+              <span class="check">✓</span>
+              <span>
+                Only use legitimate game links and codes
+                supplied by trusted hosts.
+              </span>
+            </div>
+
+            <div class="security-item">
+              <span class="check">✓</span>
+              <span>
+                Don't attempt to bypass game security,
+                authentication, or access controls.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         TIPS
+    ========================== -->
+
+    <section id="tips">
+      <div class="container">
+
+        <div class="section-title reveal">
+          <h2>💡 Tips & Tricks</h2>
+          <p>Improve your performance without cheats.</p>
+        </div>
+
+        <div class="grid">
+
+          <div class="card tip-card reveal">
+            <div class="icon">🧠</div>
+
+            <h3>Read Carefully</h3>
+
+            <p>
+              <strong>Tip:</strong>
+              Read every question completely before
+              choosing your answer.
+            </p>
+          </div>
+
+          <div class="card tip-card reveal">
+            <div class="icon">⚡</div>
+
+            <h3>Play Strategically</h3>
+
+            <p>
+              <strong>Tip:</strong>
+              Different game modes reward different
+              approaches. Learn the rules first.
+            </p>
+          </div>
+
+          <div class="card tip-card reveal">
+            <div class="icon">🎯</div>
+
+            <h3>Practice</h3>
+
+            <p>
+              <strong>Tip:</strong>
+              Practice difficult subjects to improve
+              your accuracy and speed.
+            </p>
+          </div>
+
+          <div class="card tip-card reveal">
+            <div class="icon">🏆</div>
+
+            <h3>Stay Consistent</h3>
+
+            <p>
+              <strong>Tip:</strong>
+              Good results come from understanding
+              the questions, not exploiting the game.
+            </p>
+          </div>
+
+          <div class="card tip-card reveal">
+            <div class="icon">🔐</div>
+
+            <h3>Protect Your Account</h3>
+
+            <p>
+              <strong>Tip:</strong>
+              Use a strong password and don't share
+              account credentials with other players.
+            </p>
+          </div>
+
+          <div class="card tip-card reveal">
+            <div class="icon">👥</div>
+
+            <h3>Play Fair</h3>
+
+            <p>
+              <strong>Tip:</strong>
+              Fair play keeps classroom and community
+              games fun for everyone.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+    <div class="container">
+
+      <div class="logo">
+        BLOOKET<span>HUB</span>
+      </div>
+
+      <p>
+        A fan-made educational gaming guide.
+      </p>
+
+      <p style="margin-top:10px; font-size:.8rem;">
+        Not affiliated with or endorsed by Blooket.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* Mobile navigation */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+
+    /* Copy game code */
+
+    function copyCode(code, button) {
+
+      navigator.clipboard.writeText(code);
+
+      const originalText = button.textContent;
+
+      button.textContent = "✓ Copied!";
+
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 1500);
+    }
+
+
+    /* Scroll reveal animation */
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      observer.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>
